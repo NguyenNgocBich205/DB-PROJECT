@@ -219,29 +219,6 @@ INSERT INTO THONG_TIN_GIAO_HANG VALUES
 ('MVD019','2025/03/10','20000','2025/03/12',N'Giao hàng thành công','DH0019','DVVC03'),
 ('MVD020','2025/03/10','20000','2025/03/12',N'Chờ hoàn hàng','DH0020','DVVC02');
 
---TABLE GIAO_DICH_THANH_TOAN (MaGiaoDich, PhuongThucTT, ThoiDiemTT, TrangThaiTT, SoTien, MaKH, MaDH)
-INSERT INTO GIAO_DICH_THANH_TOAN VALUES 
-('GD8459321029384756', N'E-banking', '2025/02/28 15:30:00', N'Thành công', '538000', 'KH0001', 'DH0001'),
-('GD1293845647382910', N'Ví điện tử', '2025/03/01 14:30:00', N'Thành công', '199000', 'KH0015', 'DH0002'),
-('GD6724159082736451', N'Ví điện tử', '2025/03/02 15:00:00', N'Thành công', '1185000', 'KH0003', 'DH0003'),
-('GD9082731278465930', N'Thẻ tín dụng/ghi nợ', '2025/03/03 8:30:00', N'Thành công', '498000', 'KH0017', 'DH0004'),
-('GD4502936789451237', N'Ví điện tử', '2025/03/02 17:30:00', N'Thành công', '538000', 'KH0016', 'DH0005'),
-('GD1123458901234678', N'E-banking', '2025/02/28 15:30:00', N'Thành công', '399000', 'KH0002', 'DH0006'),
-('GD6789203456789123', N'Ví điện tử', '2025/03/04 15:30:00', N'Thành công', '429000', 'KH0004', 'DH0007'),
-('GD3345679082736458', N'Ví điện tử', '2025/03/06 15:30:00', N'Thành công', '896000', 'KH0014', 'DH0008'),
-('GD9987212345678901', N'Thẻ nội địa', '2025/03/06 12:30:00', 'Thành công', '199000', 'KH0010', 'DH0009'),
-('GD2201346789012345', N'Ví điện tử', '2025/03/06 14:30:00', 'Thành công', '199000', 'KH0005', 'DH0010'),
-('GD5678439082736452', N'Ví điện tử', '2025/03/06 15:30:00', 'Thành công', '1495000', 'KH0008', 'DH0011'),
-('GD1029385647382916', N'Thẻ tín dụng/ghi nợ', '2025/03/05 15:30:00', 'Thành công', '298000', 'KH0019', 'DH0012'),
-('GD4312901278465932', N'Ví điện tử', '2025/03/03 12:30:00', 'Thành công', '149000', 'KH0018', 'DH0013'),
-('GD8821346789012347', N'E-banking', '2025/03/03 15:30:00', 'Thành công', '897000', 'KH0020', 'DH0014'),
-('GD5498723456789128', N'Thẻ tín dụng/ghi nợ', '2025/03/08 15:30:00', 'Thành công', '598000', 'KH0011', 'DH0015'),
-('GD7712369082736454', N'E-banking', '2025/03/08 11:30:00', 'Thành công', '159000', 'KH0009', 'DH0016'),
-('GD9087611278465933', N'Thẻ tín dụng/ghi nợ', '2025/03/08 15:30:00', 'Thành công', '1345000', 'KH0007', 'DH0017'),
-('GD2348905647382911', N'Ví điện tử', '2025/03/09 16:30:00', 'Thành công', '318000', 'KH0006', 'DH0018'),
-('GD6654326789012349', N'E-banking', '2025/03/09 15:30:00', 'Thành công', '798000', 'KH0012', 'DH0019'),
-('GD1189239082736450', N'Thẻ tín dụng/ghi nợ', '2025/03/09 9:30:00', 'Thành công', '399000', 'KH0013', 'DH0020');
-
 --TABLE DANH_GIA_SP (MaDanhGia, DiemDanhGia, NoiDungDanhGia, NgayDanhGia, MaKH, MaSP, MaDH)
 INSERT INTO DANH_GIA_SP (MaDanhGia, DiemDanhGia, NoiDungDanhGia, NgayDanhGia, MaKH, MaSP, MaDH) VALUES 
 ('DG0001', 5, N'Sản phẩm rất tốt, chất lượng tuyệt vời!', '2025-03-10', 'KH0010', 'SP0001', 'DH0009'),
