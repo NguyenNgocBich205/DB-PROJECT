@@ -294,7 +294,7 @@ BEGIN
      -- Khi thêm CT nhập hàng -> Cộng số lượng nhập vào số lượng tồn
     IF EXISTS (SELECT 1 FROM INSERTED) AND NOT EXISTS (SELECT 1 FROM DELETED)
 	BEGIN
-	    UPDATE SP
+        UPDATE SP
         SET SP.SoLuongTon = SP.SoLuongTon + I.SoLuongNhap
         FROM SAN_PHAM SP
         INNER JOIN INSERTED I ON SP.MaSP = I.MaSP;
@@ -302,7 +302,7 @@ BEGIN
     -- Khi xóa CT nhập hàng -> Trừ số lượng nhập ra khỏi số lượng tồn
     IF EXISTS (SELECT 1 FROM DELETED) AND NOT EXISTS (SELECT 1 FROM INSERTED)
     BEGIN
-	    UPDATE SP
+	UPDATE SP
         SET SP.SoLuongTon = SP.SoLuongTon - D.SoLuongNhap
         FROM SAN_PHAM SP
         INNER JOIN DELETED D ON SP.MaSP = D.MaSP;
