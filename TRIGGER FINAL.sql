@@ -242,11 +242,11 @@ END;
 --Test trigger:
 INSERT INTO DANH_MUC_SP VALUES ('DM0006', N'Áo khoác', N'Áo khoác bomber, áo khoác dạ, áo hoodie unisex.', 1, '2025/01/05', '2025/01/01');
 UPDATE DANH_MUC_SP SET NgayXoaDM = '2025/01/01' WHERE MaDM = 'DM0005';
-----------------------------------------------------------------------
 
---13. DON_HANG: Đơn hàng đã có thông tin giao hàng không thể xóa hoặc thay đổi
+----------------------------------------------------------------------
+--13. DON_HANG: Đơn hàng đã có thông tin giao hàng không thể xóa 
 CREATE TRIGGER TR_KHONGXOASUA_DH ON DON_HANG
-AFTER DELETE, UPDATE
+INSTEAD OF DELETE
 AS
 BEGIN
     IF EXISTS (
@@ -255,13 +255,12 @@ BEGIN
         JOIN DELETED d ON TTGH.MaDH = d.MaDH
     )
     BEGIN
-        PRINT (N'Đơn hàng đã có thông tin giao hàng, không thể xóa hoặc thay đổi.')
-        ROLLBACK TRANSACTION
+        RAISERROR (N'Đơn hàng đã có thông tin giao hàng không thể xóa.', 16, 1);
+        ROLLBACK TRANSACTION;
     END
-END
---Test trigger:
-UPDATE DON_HANG SET NgayDatDon = GETDATE() WHERE MaDH = 'DH0001';
-DELETE FROM DON_HANG WHERE MaDH = 'DH0002';
+END;
+--Test trigger
+DELETE FROM DON_HANG WHERE MaDH = 'DH0001';
 
 ----------------------------------------------------------------------
 --14. CHI_TIET_DON_HANG: Đơn giá bán không được lớn hơn giá niêm yết của sản phẩm 
