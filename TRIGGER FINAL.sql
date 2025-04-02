@@ -245,7 +245,7 @@ UPDATE DANH_MUC_SP SET NgayXoaDM = '2025/01/01' WHERE MaDM = 'DM0005';
 
 ----------------------------------------------------------------------
 --13. DON_HANG: Đơn hàng đã có thông tin giao hàng không thể xóa 
-CREATE TRIGGER TR_KHONGXOASUA_DH ON DON_HANG
+CREATE TRIGGER TR_KHONGXOA_DH ON DON_HANG
 INSTEAD OF DELETE
 AS
 BEGIN
