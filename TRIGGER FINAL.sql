@@ -334,6 +334,8 @@ BEGIN
     FROM SAN_PHAM SP
     INNER JOIN INSERTED I ON SP.MaSP = I.MaSP;
 END;
+--Test trigger:
+INSERT INTO CHI_TIET_DON_HANG VALUES ('DH0020','SP0001','5','199000');
 
 ----------------------------------------------------------------------
 --17. SAN_PHAM: Thông báo khi số lượng tồn <10
