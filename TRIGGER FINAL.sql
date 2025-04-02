@@ -163,8 +163,8 @@ BEGIN
     END
 END
 --Test trigger
-UPDATE CHI_TIET_DAT_HANG SET MaSP = 'SP0003' WHERE MaPhieuDatHang = 'PDH002';
-INSERT INTO CHI_TIET_DAT_HANG VALUES ('PDH002', 'SP0003', 40, 160000);
+UPDATE CHI_TIET_DAT_HANG SET MaSP = 'SP0004' WHERE MaPhieuDatHang = 'PDH002';
+INSERT INTO CHI_TIET_DAT_HANG VALUES ('PDH002', 'SP0004', 40, 160000);
 
 ----------------------------------------------------------------------
 --10. DANH_GIA_SP: Trigger chỉ cho phép khách hàng đánh giá đơn hàng của mình và ghi nhận đánh giá chỉ khi đơn hoàn thành
