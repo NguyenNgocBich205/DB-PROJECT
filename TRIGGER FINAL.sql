@@ -346,9 +346,11 @@ AS
 BEGIN
     IF EXISTS (SELECT 1 FROM INSERTED WHERE SoLuongTon < 10)
     BEGIN
-        PRINT 'Cảnh báo: Sản phẩm sắp hết hàng (tồn kho <10)';
+        PRINT (N'Cảnh báo: Sản phẩm sắp hết hàng (tồn kho <10)');
     END
 END;
+--Test trigger
+UPDATE SAN_PHAM SET SoLuongTon = 9 WHERE MaSP = 'SP0010';
 
 ----------------------------------------------------------------------
 --18. CHI_TIET_DON_HANG: Kiểm tra số lượng tồn khi khách hàng đặt hàng
